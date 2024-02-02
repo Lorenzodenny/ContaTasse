@@ -241,17 +241,20 @@
                         {
                             contribuente1.TaxCalc(75000, 43, 25420);
                         }
+
+                        Console.Clear();
+                        Console.WriteLine();
+                        Console.WriteLine("Ecco tutti i tuoi dati");
+                        Console.WriteLine();
+                        contribuente1.ShowInfo();
+
                     }
                     else
                     {
-                        Console.WriteLine("Le tasse possono essere calcolate solo su conti superiori a 0");
+                        Console.WriteLine("Le tasse si pagano su redditi maggiori a 0");
                     }
 
-                    Console.Clear();
-                    Console.WriteLine();
-                    Console.WriteLine("Ecco tutti i tuoi dati");
-                    Console.WriteLine();
-                    contribuente1.ShowInfo();
+                    
                 }
 
                 // METHOD OF CHOICE
