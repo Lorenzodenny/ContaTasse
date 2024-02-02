@@ -212,47 +212,54 @@
 
                     //REDDITO
                     Console.Clear();
+                    controllo = true;
+                    double reddito = 0;
 
-
-                    Console.WriteLine($"Inserisci il tuo reddito:");
-                    double reddito = double.Parse(Console.ReadLine());
-
-                    User contribuente1 = new User(nome, cognome, giornoNascita, meseNascita, annoNascita, codiceFiscale, genere, residenza, reddito);
-
-                    if(reddito > 0)
+                    while (controllo)
                     {
-                        if (contribuente1.Reddito > 0 && contribuente1.Reddito <= 15000)
+                        Console.WriteLine($"Inserisci il tuo reddito:");
+                        reddito = double.Parse(Console.ReadLine());
+
+                        User contribuente1 = new User(nome, cognome, giornoNascita, meseNascita, annoNascita, codiceFiscale, genere, residenza, reddito);
+
+                        if (reddito > 0)
                         {
-                            contribuente1.TaxCalc(0, 23, 0);
-                        }
-                        else if (contribuente1.Reddito >= 15001 && contribuente1.Reddito <= 28000)
-                        {
-                            contribuente1.TaxCalc(15001, 27, 3450);
-                        }
-                        else if (contribuente1.Reddito >= 28001 && contribuente1.Reddito <= 55000)
-                        {
-                            contribuente1.TaxCalc(28001, 38, 6960);
-                        }
-                        else if (contribuente1.Reddito >= 55001 && contribuente1.Reddito <= 75000)
-                        {
-                            contribuente1.TaxCalc(55001, 41, 17220);
+                            if (contribuente1.Reddito > 0 && contribuente1.Reddito <= 15000)
+                            {
+                                contribuente1.TaxCalc(0, 23, 0);
+                            }
+                            else if (contribuente1.Reddito >= 15001 && contribuente1.Reddito <= 28000)
+                            {
+                                contribuente1.TaxCalc(15001, 27, 3450);
+                            }
+                            else if (contribuente1.Reddito >= 28001 && contribuente1.Reddito <= 55000)
+                            {
+                                contribuente1.TaxCalc(28001, 38, 6960);
+                            }
+                            else if (contribuente1.Reddito >= 55001 && contribuente1.Reddito <= 75000)
+                            {
+                                contribuente1.TaxCalc(55001, 41, 17220);
+                            }
+                            else
+                            {
+                                contribuente1.TaxCalc(75000, 43, 25420);
+                            }
+
+                            Console.Clear();
+                            Console.WriteLine();
+                            Console.WriteLine("Ecco tutti i tuoi dati");
+                            Console.WriteLine();
+                            contribuente1.ShowInfo();
+
                         }
                         else
                         {
-                            contribuente1.TaxCalc(75000, 43, 25420);
+                            Console.WriteLine("Le tasse si pagano su redditi maggiori a 0");
+                            GestisciScelta();
                         }
-
-                        Console.Clear();
-                        Console.WriteLine();
-                        Console.WriteLine("Ecco tutti i tuoi dati");
-                        Console.WriteLine();
-                        contribuente1.ShowInfo();
-
                     }
-                    else
-                    {
-                        Console.WriteLine("Le tasse si pagano su redditi maggiori a 0");
-                    }
+
+                    
 
                     
                 }
