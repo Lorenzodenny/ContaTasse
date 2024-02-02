@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             {
-                Console.WriteLine("*** Benvenut/* dentro l'ennesimo incubo ***");
+                Console.WriteLine("*** Benvenuti dentro l'ennesimo incubo della tassomonologia!!! ***");
                 Console.WriteLine();
 
                 // NOME
@@ -19,19 +19,8 @@
                     if (nome.Length < 2)
                     {
                         Console.WriteLine("Questo nome non esiste, inseriscine un' altro");
-                        Console.WriteLine("Digita Y se vuoi reinserire o N se vuoi uscire dall'applicazione");
-                        string scelta = Console.ReadLine().ToLower();
-
-                        if (scelta.ToLower() != "y" && scelta.ToLower() != "n")
-                        {
-                            Console.WriteLine("questo comando non esiste");
-
-                        }
-                        else if (scelta.ToLower() == "n")
-                        {
-                            Console.WriteLine("Arrivederci");
-                            return;
-                        }
+                        Console.WriteLine();
+                        GestisciScelta();
                     }
                     else
                     {
@@ -49,27 +38,15 @@
                 {
                     Console.WriteLine($"Inserisci il tuo cognome:");
                     cognome = Console.ReadLine();
-                    if (cognome.Length < 1)
+                    if (cognome.Length < 2)
                     {
                         Console.WriteLine("Questo cognome non esiste, inseriscine un' altro");
-                        Console.WriteLine("Digita Y se vuoi reinserire o N se vuoi uscire dall'applicazione");
-                        string scelta = Console.ReadLine().ToLower();
-
-                        if (scelta.ToLower() != "y" && scelta.ToLower() != "n")
-                        {
-                            Console.WriteLine("questo comando non esiste");
-
-                        }
-                        else if (scelta.ToLower() == "n")
-                        {
-                            Console.WriteLine("Arrivederci");
-                            return;
-
-                        }
-                        else
-                        {
-                            controllo = false;
-                        }
+                        Console.WriteLine();
+                        GestisciScelta();
+                    }
+                    else
+                    {
+                        controllo = false;
                     }
 
 
@@ -91,37 +68,15 @@
                         if (giornoNascita.Length != 2)
                         {
                             Console.WriteLine("Inserisci nel formato giusto");
-                            Console.WriteLine("Digita Y se vuoi reinserire o N se vuoi uscire dall'applicazione");
-                            string scelta = Console.ReadLine().ToLower();
-
-                            if (scelta.ToLower() != "y" && scelta.ToLower() != "n")
-                            {
-                                Console.WriteLine("questo comando non esiste");
-
-                            }
-                            else if (scelta.ToLower() == "n")
-                            {
-                                Console.WriteLine("Arrivederci");
-                                return;
-                            }
+                            Console.WriteLine();
+                            GestisciScelta();
 
                         }
                         else if (int.Parse(giornoNascita) <= 0 || int.Parse(giornoNascita) > 31)
                         {
                             Console.WriteLine("Questo giorno non esiste");
-                            Console.WriteLine("Digita Y se vuoi reinserire o N se vuoi uscire dall'applicazione");
-                            string scelta = Console.ReadLine().ToLower();
-
-                            if (scelta.ToLower() != "y" && scelta.ToLower() != "n")
-                            {
-                                Console.WriteLine("questo comando non esiste");
-
-                            }
-                            else if (scelta.ToLower() == "n")
-                            {
-                                Console.WriteLine("Arrivederci");
-                                return;
-                            }
+                            Console.WriteLine();
+                            GestisciScelta();
 
                         }
                         else
@@ -145,37 +100,15 @@
                         if (meseNascita.ToString().Length != 2)
                         {
                             Console.WriteLine("Inserisci nel formato giusto");
-                            Console.WriteLine("Digita Y se vuoi reinserire o N se vuoi uscire dall'applicazione");
-                            string scelta = Console.ReadLine().ToLower();
-
-                            if (scelta.ToLower() != "y" && scelta.ToLower() != "n")
-                            {
-                                Console.WriteLine("questo comando non esiste");
-
-                            }
-                            else if (scelta.ToLower() == "n")
-                            {
-                                Console.WriteLine("Arrivederci");
-                                return;
-                            }
+                            Console.WriteLine();
+                            GestisciScelta();
 
                         }
                         else if (int.Parse(meseNascita) <= 0 || int.Parse(meseNascita) > 12)
                         {
                             Console.WriteLine("Questo mese non esiste");
-                            Console.WriteLine("Digita Y se vuoi reinserire o N se vuoi uscire dall'applicazione");
-                            string scelta = Console.ReadLine().ToLower();
-
-                            if (scelta.ToLower() != "y" && scelta.ToLower() != "n")
-                            {
-                                Console.WriteLine("questo comando non esiste");
-
-                            }
-                            else if (scelta.ToLower() == "n")
-                            {
-                                Console.WriteLine("Arrivederci");
-                                return;
-                            }
+                            Console.WriteLine();
+                            GestisciScelta();
 
                         }
                         else
@@ -196,37 +129,15 @@
                         if (annoNascita.ToString().Length != 4)
                         {
                             Console.WriteLine("Inserisci nel formato giusto");
-                            Console.WriteLine("Digita Y se vuoi reinserire o N se vuoi uscire dall'applicazione");
-                            string scelta = Console.ReadLine().ToLower();
-
-                            if (scelta.ToLower() != "y" && scelta.ToLower() != "n")
-                            {
-                                Console.WriteLine("questo comando non esiste");
-
-                            }
-                            else if (scelta.ToLower() == "n")
-                            {
-                                Console.WriteLine("Arrivederci");
-                                return;
-                            }
+                            Console.WriteLine();
+                            GestisciScelta();
 
                         }
                         else if (int.Parse(annoNascita) > 2024)
                         {
                             Console.WriteLine("Ancora devi nascèèèèèèè!!!");
-                            Console.WriteLine("Digita Y se vuoi reinserire o N se vuoi uscire dall'applicazione");
-                            string scelta = Console.ReadLine().ToLower();
-
-                            if (scelta.ToLower() != "y" && scelta.ToLower() != "n")
-                            {
-                                Console.WriteLine("questo comando non esiste");
-
-                            }
-                            else if (scelta.ToLower() == "n")
-                            {
-                                Console.WriteLine("Arrivederci");
-                                return;
-                            }
+                            Console.WriteLine();
+                            GestisciScelta();
                         }
                         else
                         {
@@ -247,19 +158,8 @@
                         if (codiceFiscale.Length != 16)
                         {
                             Console.WriteLine("troppi pochi caratteri");
-                            Console.WriteLine("Digita Y se vuoi reinserire o N se vuoi uscire dall'applicazione");
-                            string scelta = Console.ReadLine().ToLower();
-
-                            if (scelta.ToLower() != "y" && scelta.ToLower() != "n")
-                            {
-                                Console.WriteLine("questo comando non esiste");
-
-                            }
-                            else if (scelta.ToLower() == "n")
-                            {
-                                Console.WriteLine("Arrivederci");
-                                return;
-                            }
+                            Console.WriteLine();
+                            GestisciScelta();
                         }
                         else
                         {
@@ -280,19 +180,8 @@
                         if (genere.ToLower() != "m" && genere.ToLower() != "f" && genere.ToLower() != "a")
                         {
                             Console.WriteLine("Il tuo genere non esiste");
-                            Console.WriteLine("Digita Y se vuoi reinserire o N se vuoi uscire dall'applicazione");
-                            string scelta = Console.ReadLine().ToLower();
-
-                            if (scelta.ToLower() != "y" && scelta.ToLower() != "n")
-                            {
-                                Console.WriteLine("questo comando non esiste");
-
-                            }
-                            else if (scelta.ToLower() == "n")
-                            {
-                                Console.WriteLine("Arrivederci");
-                                return;
-                            }
+                            Console.WriteLine();
+                            GestisciScelta();
 
                         }
                         else
@@ -312,19 +201,8 @@
                         if (residenza.Length > 30)
                         {
                             Console.WriteLine("Non esistono paesi con questo nome");
-                            Console.WriteLine("Digita Y se vuoi reinserire o N se vuoi uscire dall'applicazione");
-                            string scelta = Console.ReadLine().ToLower();
-
-                            if (scelta.ToLower() != "y" && scelta.ToLower() != "n")
-                            {
-                                Console.WriteLine("questo comando non esiste");
-
-                            }
-                            else if (scelta.ToLower() == "n")
-                            {
-                                Console.WriteLine("Arrivederci");
-                                return;
-                            }
+                            Console.WriteLine();
+                            GestisciScelta();
                         }
                         else
                         {
@@ -367,6 +245,23 @@
                     Console.WriteLine("Ecco tutti i tuoi dati");
                     Console.WriteLine();
                     contribuente1.ShowInfo();
+                }
+
+                static void GestisciScelta()
+                {
+                    Console.WriteLine("Digita <Y> se vuoi reinserire o <N> se vuoi uscire dall'applicazione");
+                    string scelta = Console.ReadLine().ToLower();
+
+                    if (scelta != "y" && scelta != "n")
+                    {
+                        Console.WriteLine("Questo comando non esiste");
+                        GestisciScelta(); 
+                    }
+                    else if (scelta == "n")
+                    {
+                        Console.WriteLine("Arrivederci");
+                        Environment.Exit(0);
+                    }
                 }
 
 
@@ -478,7 +373,7 @@
             public double TotTax { get; set; }
 
 
-
+            // COSTRUCTOR
 
 
             public User(string nome, string cognome, string giornoNascita, string meseNascita, string annoNascita, string codFiscale, string genere, string residenza, double reddito)
@@ -494,6 +389,8 @@
                 Reddito = reddito;
             }
 
+            // METHODS
+
             public void TaxCalc(int rangeMin, int aliquota, int taxExec)
             {
                 double eccedenza = Reddito - rangeMin;
@@ -501,6 +398,8 @@
                 TotTax = tax + taxExec;
 
             }
+
+
 
             public void ShowInfo()
             {
