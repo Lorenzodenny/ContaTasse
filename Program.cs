@@ -48,7 +48,7 @@
                     {
                         controllo = false;
                     }
-
+                }
 
                     // DATA DI NASCITA
 
@@ -262,7 +262,7 @@
                     
 
                     
-                }
+                
 
                 // METHOD OF CHOICE
 
